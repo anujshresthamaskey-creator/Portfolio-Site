@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-scroll-smooth"> <!-- Class for locomotive scroll -->
+    <!-- This container is REQUIRED by Locomotive Scroll -->
+    <div id="main-container" data-scroll-container>
+        <!-- HEADER / NAVIGATION -->
+        <header class="header">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Maskey.</a>
+                <!-- Desktop Navigation -->
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="project.html" class="nav-link">Projects</a>
+                    <a href="skill.html" class="nav-link">Skills</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="mailto:anujshresthamaskey@gmail.com" class="connect-btn connect-btn-desktop">Let's Connect</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-nav-menu" class="mobile-nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="project.html" class="nav-link">Projects</a>
+                <a href="skill.html" class="nav-link">Skills</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="mailto:anujshresthamaskey@gmail.com" class="connect-btn">Let's Connect</a>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main id="page-content">
+
+            <!-- HOME PAGE HERO -->
+            <section class="page-section hero-section" data-scroll-section>
+                <h1 id="hero-title" class="hero-title">
+                    <span data-scroll data-scroll-speed="2" data-scroll-delay="0.05">Web Designer</span>
+                    <span class="text-indigo" data-scroll data-scroll-speed="2" data-scroll-delay="0.1">Developer</span>
+                </h1>
+                <p id="hero-subtitle" class="hero-subtitle" data-scroll data-scroll-speed="1.5">
+                    A creative developer crafting dynamic, accessible, and beautiful interfaces.
+                </p>
+            </section>
+
+            <!-- Featured Work Section -->
+            <section class="page-section" data-scroll-section>
+                <h2 class="page-title reveal-title" data-scroll>Featured Work</h2>
+                <div class="grid-container grid-cols-2">
+                    
+                    <div class="project-card reveal-title" data-scroll>
+                        <img src="assets/images/PasalKhata.png" alt="Project One">
+                        <div class="project-card-content">
+                            <h3>Pasal Khata</h3>
+                            <p>Pasal Khata is a smart business ledger app built with Firebase that helps shop owners track customer debts, payments, and balances in real time — offering clear analytics, reports, and an easy-to-use dashboard.</p>
+                            <a href="project.html">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal-title" data-scroll>
+                        <img src="assets/images/Secure_Login.png" alt="Project Two">
+                        <div class="project-card-content">
+                            <h3>Secure Login Process</h3>
+                            <p>A secure user authentication system built using Firebase Authentication, HTML, CSS, and JavaScript. It ensures safe login, signup, and session handling with real-time validation and password protection.</p>
+                            <a href="project.html">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+           <!-- FOOTER -->
+            <footer class="footer" data-scroll-section>
+                <div class="footer-links">
+                    <a href="https://github.com/anujshresthamaskey-creator" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/anuj-shrestha-11457238a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://x.com/anujmaskeyXtha" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+                <p>&copy; 2025 Anuj Shrestha. All rights reserved.</p>
+            </footer>
+
+        </main>
+
+    </div> <!-- End #main-container -->
+
+    <!-- 2. JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- 3. Global JS -->
+    <script src="script.js"></script>
+</body>
+</html>
