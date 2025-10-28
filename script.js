@@ -117,3 +117,44 @@ document.querySelectorAll('.reveal-title').forEach(el => {
     });
     });
 });
+
+(function(){
+      const steps = Array.from(document.querySelectorAll('.step'));
+      const tocLinks = Array.from(document.querySelectorAll('.toc a'));
+      const progressBar = document.querySelector('.progress > i');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+      let current = 0;
+
+      function setActive(index){
+        current = Math.max(0, Math.min(index, steps.length - 1));
+        // highlight step cards visually
+        steps.forEach((s,i)=> s.style.opacity = (i === current ? '1' : '0.6'));
+        tocLinks.forEach((a,i)=> a.classList.toggle('active', i === Math.min(current, tocLinks.length-1)));
+        const pct = Math.round(((current) / (steps.length - 1)) * 100);
+        progressBar.style.width = pct + '%';
+        // scroll to the corresponding anchor in the main content
+        const anchor = ['problem','solution','process','impact','overview'][Math.min(current,4)];
+        const el = document.getElementById(anchor);
+        if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); }
+      }
+
+      prevBtn.addEventListener('click',()=> setActive(current - 1));
+      nextBtn.addEventListener('click',()=> setActive(current + 1));
+
+      tocLinks.forEach((link,i)=>{
+        link.addEventListener('click', (e)=>{
+          e.preventDefault();
+          setActive(i);
+        });
+      });
+
+      // start at first step
+      setActive(0);
+
+      // keyboard navigation
+      window.addEventListener('keydown', (e)=>{
+        if(e.key === 'ArrowRight') setActive(current + 1);
+        if(e.key === 'ArrowLeft') setActive(current - 1);
+      });
+    })();   
