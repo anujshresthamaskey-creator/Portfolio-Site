@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827; /* Dark Blue-Gray */
+    color: #F9FAFB; /* Almost White */
+    line-height: 1.6;
+    /* For WebKit (Chrome, Safari) */
+    -webkit-font-smoothing: antialiased; 
+    
+    /* For Mozilla (Firefox) */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Locomotive Scroll Core CSS --- */
+
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh;
+}
+
+/* Custom scrollbar (dark theme) */
+.c-scrollbar {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar {
+    opacity: 1;
+}
+.c-scrollbar_thumb {
+    background-color: #4F46E5; /* Indigo */
+    border-radius: 10px;
+    width: 7px;
+    margin: 2px;
+}
+
+/* ---  Header & Navigation --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(17, 24, 39, 0.85); /* bg-gray-900/85 */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 5rem; /* 80px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* 40px */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #D1D5DB; /* text-gray-300 */
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #818CF8; /* indigo-400 */
+}
+
+.nav-link.active {
+    color: #6366F1; /* indigo-500 */
+    font-weight: 700;
+}
+
+.connect-btn {
+    display: inline-block;
+    background-color: #4F46E5; /* indigo-600 */
+    color: #fff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.connect-btn:hover {
+    background-color: #4338CA; /* indigo-700 */
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.mobile-menu-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: #D1D5DB;
+}
+
+.mobile-nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
+    background-color: #1F2937; /* gray-800 */
+    border-top: 1px solid #374151; /* gray-700 */
+}
+
+.mobile-nav-menu .connect-btn {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* --- Page Layout & Content --- */
+.page-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem 2rem; /* 128px top padding */
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 3.75rem; /* 60px */
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+}
+
+.page-subtitle {
+    font-size: 1.25rem; /* 20px */
+    color: #9CA3AF; /* gray-400 */
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---  Hero Section (Home Page) --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 5rem); /* Full height minus header */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-title {
+    font-size: 6rem; /* 96px */
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.hero-title span {
+    display: block;
+    /* Styles for GSAP animation */
+    opacity: 0;
+    transform: translateY(100px);
+}
+.hero-title .text-indigo {
+    color: #818CF8; /* indigo-400 */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem; /* 24px */
+    color: #D1D5DB;
+    max-width: 600px;
+    margin-top: 1.5rem;
+    /* Styles for GSAP animation */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* ---  Card Styles (Projects, Skills, Blog) --- */
+.grid-container {
+    display: grid;
+    gap: 2rem;
+}
+
+/* 3-column grid */
+.grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr); /* Mobile first */
+}
+@media (min-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 2-column grid */
+.grid-cols-2 {
+    grid-template-columns: repeat(1, 1fr); /* Mobile first */
+}
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card, .skill-category, .blog-post {
+    background-color: #1F2937; /* gray-800 */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.project-card-content, .skill-category, .blog-post-content {
+    padding: 1.5rem;
+}
+
+.project-card h3, .skill-category h2, .blog-post h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.skill-category h2 {
+    color: #818CF8; /* indigo-400 */
+    margin-bottom: 1rem;
+}
+
+.project-card p, .blog-post p {
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.project-card a, .blog-post a {
+    color: #818CF8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.project-card a:hover, .blog-post a:hover {
+    color: #6366F1;
+}
+
+.skill-category ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.skill-category li {
+    font-size: 1.125rem;
+    color: #D1D5DB;
+}
+
+.blog-post time {
+    font-size: 0.875rem;
+    color: #6B7280;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* --- 7. Footer --- */
+.footer {
+    background-color: #1F2937;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+.footer p {
+    color: #6B7280;
+}
+
+/* --- GSAP Animation Helper --- */
+/* Class for elements to be revealed on scroll */
+.reveal-title {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* We'll add an 'is-visible' class with JS */
+.reveal-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+    .nav-menu, .connect-btn-desktop {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+    .mobile-nav-menu.is-open {
+        display: flex;
+    }
+    .hero-title {
+        font-size: 3.5rem; /* 56px */
+    }
+    .hero-subtitle {
+        font-size: 1.25rem; /* 20px */
+    }
+    .page-title {
+        font-size: 2.5rem; /* 40px */
+    }
+}
+
+
+ 

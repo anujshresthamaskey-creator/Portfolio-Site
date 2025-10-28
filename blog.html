@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-scroll-smooth">
+
+    <div id="main-container" data-scroll-container>
+
+        <!-- HEADER / NAVIGATION -->
+        <header class="header">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Maskey.</a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="project.html" class="nav-link">Projects</a>
+                    <a href="skill.html" class="nav-link">Skills</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="mailto:anujshresthamaskey@gmail.com" class="connect-btn connect-btn-desktop">Let's Connect</a>
+                </div>
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+            <div id="mobile-nav-menu" class="mobile-nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="project.html" class="nav-link">Projects</a>
+                <a href="skill.html" class="nav-link">Skills</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="mailto:anujshresthamaskey@gmail.com" class="connect-btn">Let's Connect</a>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main id="page-content">
+
+            <!-- BLOG PAGE -->
+            <section class="page-section" data-scroll-section>
+                <h1 class="page-title reveal-title" data-scroll>My Thoughts</h1>
+                <p class="page-subtitle reveal-title" data-scroll>Writing about web development, design, and new tech.</p>
+
+                <div class="grid-container" style="gap: 3rem;">
+                    
+                    <!-- Blog Post (Template) -->
+                    <article class="blog-post reveal-title" data-scroll>
+                        <div class="blog-post-content">
+                            <time>October 26, 2025</time>
+                            <h2>Why I Chose GSAP for Animations</h2>
+                            <p>A deep dive into the GreenSock Animation Platform and how it compares to other solutions like CSS animations and Framer Motion.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post (Template) -->
+                    <article class="blog-post reveal-title" data-scroll>
+                        <div class="blog-post-content">
+                            <time>September 15, 2025</time>
+                            <h2>5 Tips for Better Responsive Design</h2>
+                            <p>Going beyond the basics. How to use modern CSS, clamp(), and container queries to make your sites look great everywhere.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post (Template) -->
+                    <article class="blog-post reveal-title" data-scroll>
+                        <div class="blog-post-content">
+                            <time>August 02, 2025</time>
+                            <h2>The "One CSS File" Approach: Pros and Cons</h2>
+                            <p>Exploring the architecture of a multi-page site with a single stylesheet vs. component-based styling or utility-first frameworks.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer" data-scroll-section>
+                <div class="footer-links">
+                    <a href="https://github.com/anujshresthamaskey-creator" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/anuj-shrestha-11457238a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://x.com/anujmaskeyXtha" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+                <p>&copy; 2025 Anuj Shrestha. All rights reserved.</p>
+            </footer>
+
+        </main>
+
+    </div> <!-- End #main-container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
