@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Case Study — MealMate</title>
+  <meta name="description" content="Case study template: problem, solution, process, impact. Fully responsive." />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cover {
+  width: 100%;
+  height: 350px;
+  background-image: url("assets/images/MealMateAPP.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">AS</div>
+        <div>
+          <div class="site-title">MealMate — Case Study</div>
+          <div class="site-sub">Product design • Android • Firebase</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" class="kicker">Back to portfolio</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="overview">
+        <div class="hero">
+          <div class="kicker">Case Study</div>
+          <h1 id="overview">MealMate — Meal Planning &amp; Recipe App</h1>
+          <div class="meta">Role: Product Designer &amp; Developer • Year: 2024 • Platform: Android</div>
+          <div class="cover" role="img" aria-label="MealMate app screenshot"></div>
+        </div>
+
+        <div class="section" id="problem">
+          <h2>Problem</h2>
+          <p class="text-muted">Many users struggle to plan meals, manage grocery lists, and track nutrition in one place. Small shop owners and users alike often need a simple, offline-capable solution with sync.</p>
+        </div>
+
+        <div class="section" id="solution">
+          <h2>Solution</h2>
+          <p class="text-muted">MealMate is a lightweight Android app built with Java and Firebase. It offers meal plans, recipes, grocery lists, food logging, and geolocation to discover nearby stores.</p>
+
+          <div class="features" aria-hidden="false">
+            <div class="feature">
+              <strong>Meals & Plans</strong>
+              <div class="text-muted">Create daily/weekly meal plans and reusable recipes.</div>
+            </div>
+            <div class="feature">
+              <strong>Grocery Lists</strong>
+              <div class="text-muted">Auto-generate shopping lists from recipes.</div>
+            </div>
+            <div class="feature">
+              <strong>Authentication</strong>
+              <div class="text-muted">Secure signup &amp; login with Firebase Auth.</div>
+            </div>
+            <div class="feature">
+              <strong>Real-time Sync</strong>
+              <div class="text-muted">Cloud sync with offline-first design.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="process">
+          <h2>Process — Step by step guide</h2>
+          <p class="text-muted">Below is a guided walkthrough a user will follow to get started with MealMate. You can use the sidebar to jump between steps.</p>
+
+          <div class="steps" id="steps">
+            <div class="step" data-step="1">
+              <div class="num">1</div>
+              <div class="content">
+                <div class="title">Install &amp; Sign up</div>
+                <div class="desc">Download the app from Play Store or install APK. Create an account using email or sign in with Google. Accept permissions for location if you want store discovery.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="2">
+              <div class="num">2</div>
+              <div class="content">
+                <div class="title">Create Your First Meal Plan</div>
+                <div class="desc">Tap "New Plan" → choose days → add recipes from the library or create a custom recipe. Save and review weekly overview.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="3">
+              <div class="num">3</div>
+              <div class="content">
+                <div class="title">Generate Grocery List</div>
+                <div class="desc">From a meal plan, tap "Generate List" to convert ingredients into a consolidated shopping list. You can check-off items during shopping and sync across devices.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="4">
+              <div class="num">4</div>
+              <div class="content">
+                <div class="title">Track Intake &amp; Discover Stores</div>
+                <div class="desc">Log meals to track nutrition. Use the "Nearby" tab to find stores; the app uses geolocation and shows directions.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="5">
+              <div class="num">5</div>
+              <div class="content">
+                <div class="title">Settings &amp; Backup</div>
+                <div class="desc">Enable automatic backup to Firebase, manage account settings, and export lists as CSV if needed.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="controls">
+            <button id="prev" class="ghost">← Previous</button>
+            <button id="next">Next →</button>
+            <div style="flex:1"></div>
+            <a href="#" id="download" class="ghost">Download APK / Assets</a>
+          </div>
+        </div>
+
+        <div class="section" id="impact">
+          <h2>Impact &amp; Metrics</h2>
+          <p class="text-muted">After launch, MealMate reached 5,000 installs, 72% weekly retention, and reduced average grocery time by 18% in a small study.</p>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Android</span>
+            <span class="tag">Java</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">UX</span>
+          </div>
+        </div>
+
+        <footer>
+          <div>Want this case study adapted for another project? <a href="#">Contact me</a></div>
+        </footer>
+      </section>
+
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="kicker">Quick Navigation</div>
+          <h3 style="margin:8px 0 0 0">Walkthrough</h3>
+          <div style="margin-top:8px" class="progress" aria-hidden="true"><i style="width:0%"></i></div>
+
+          <nav class="toc" aria-label="Case study steps">
+            <a href="#problem" data-step-link="1" class="active">1 — Problem</a>
+            <a href="#solution" data-step-link="2">2 — Solution</a>
+            <a href="#process" data-step-link="3">3 — Process</a>
+            <a href="#impact" data-step-link="4">4 — Impact</a>
+            <a href="#overview" data-step-link="5">Overview</a>
+          </nav>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="ghost" href="https://github.com/anujshresthamaskey-creator" target="_blank" rel="noopener noreferrer">Source</a>
+            <a class="ghost" href="https://www.linkedin.com/in/anuj-shrestha-11457238a/" target="_blank" rel="noopener noreferrer">Connect</a>
+          </div>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card">
+          <div class="kicker">Case Study Details</div>
+          <div style="margin-top:8px" class="text-muted">Duration: 6 months<br/>Team: Solo (Design & Dev)<br/>Role: Product Designer &amp; Developer</div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Case Study — Secure Login System</title>
+  <meta name="description" content="Secure login system with Firebase Authentication, reCAPTCHA, OTP verification, login attempt limits, and password-protected account deletion." />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .cover {
+      width: 100%;
+      height: 350px;
+      background-image: url("assets/images/Secure_Login.png");
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">AS</div>
+        <div>
+          <div class="site-title">Secure Login System — Case Study</div>
+          <div class="site-sub">Authentication • Firebase • Security</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" class="kicker">Back to portfolio</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="overview">
+        <div class="hero">
+          <div class="kicker">Case Study</div>
+          <h1 id="overview">Secure Login & User Authentication System</h1>
+          <div class="meta">Role: Full Stack Developer • Year: 2025 • Platform: Web & Android</div>
+          <div class="cover" role="img" aria-label="Secure Login UI"></div>
+        </div>
+
+        <!-- PROBLEM -->
+        <div class="section" id="problem">
+          <h2>Problem</h2>
+          <p class="text-muted">
+            Many login pages look secure but lack essential protection like brute-force prevention, 
+            two-factor authentication, and bot validation. Without these, attackers can guess passwords, 
+            bypass access, or misuse accounts.
+          </p>
+        </div>
+
+        <!-- SOLUTION -->
+        <div class="section" id="solution">
+          <h2>Solution</h2>
+          <p class="text-muted">
+            I developed a secure authentication system using Firebase Authentication, Google reCAPTCHA, 
+            OTP-based two-factor authentication, login attempt rate limiting, and password-confirmation 
+            before account deletion. This ensures safety while keeping the login process user-friendly.
+          </p>
+
+          <div class="features">
+            <div class="feature">
+              <strong>Email & Password Login</strong>
+              <div class="text-muted">Simple and secure registration and login flow.</div>
+            </div>
+            <div class="feature">
+              <strong>Google Sign-In</strong>
+              <div class="text-muted">Quick login using secure OAuth 2.0.</div>
+            </div>
+            <div class="feature">
+              <strong>reCAPTCHA Protection</strong>
+              <div class="text-muted">Prevents bots and automated login attempts.</div>
+            </div>
+            <div class="feature">
+              <strong>Two-Factor Authentication (OTP)</strong>
+              <div class="text-muted">Verification code sent to email for extra security.</div>
+            </div>
+            <div class="feature">
+              <strong>Login Attempt Lockout</strong>
+              <div class="text-muted">Account temporarily locked after 5 failed attempts for 5 minutes.</div>
+            </div>
+            <div class="feature">
+              <strong>Secure Account Deletion</strong>
+              <div class="text-muted">User must re-enter password to delete account.</div>
+            </div>
+            <div class="feature">
+              <strong>Password Reset</strong>
+              <div class="text-muted">Email recovery link sent via Firebase.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROCESS GUIDE -->
+        <div class="section" id="process">
+          <h2>Process — Step-by-Step Usage</h2>
+          <p class="text-muted">How a user interacts with the authentication flow:</p>
+
+          <div class="steps" id="steps">
+
+            <div class="step" data-step="1">
+              <div class="num">1</div>
+              <div class="content">
+                <div class="title">Create Account</div>
+                <div class="desc">User signs up using email, password & completes reCAPTCHA verification.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="2">
+              <div class="num">2</div>
+              <div class="content">
+                <div class="title">Login</div>
+                <div class="desc">If login attempts fail 5 times, the user is locked out for 5 minutes.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="3">
+              <div class="num">3</div>
+              <div class="content">
+                <div class="title">Two-Factor Authentication</div>
+                <div class="desc">User receives a one-time OTP code via email to complete verification.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="4">
+              <div class="num">4</div>
+              <div class="content">
+                <div class="title">Access Account</div>
+                <div class="desc">User is now securely logged in and session persists until logout.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="5">
+              <div class="num">5</div>
+              <div class="content">
+                <div class="title">Account Management</div>
+                <div class="desc">To delete the account, user must confirm by entering their password.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="prev" class="ghost">← Previous</button>
+            <button id="next">Next →</button>
+            <div style="flex:1"></div>
+            <a href="#" id="download" class="ghost">Github Repo / Demo</a>
+          </div>
+        </div>
+
+        <!-- IMPACT -->
+        <div class="section" id="impact">
+          <h2>Impact</h2>
+          <p class="text-muted">
+            This secure login system prevents most common cyber-attacks such as password guessing, 
+            automated bot login attempts, and unauthorized account misuse while keeping the experience smooth.
+          </p>
+
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Firebase</span>
+            <span class="tag">Authentication</span>
+            <span class="tag">Security</span>
+            <span class="tag">Web App</span>
+          </div>
+        </div>
+
+        <footer>
+          <div>Need secure login for your application? <a href="#">Contact me</a></div>
+        </footer>
+      </section>
+
+      <!-- SIDEBAR (unchanged) -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="kicker">Quick Navigation</div>
+          <h3>Walkthrough</h3>
+          <div class="progress"><i style="width:0%"></i></div>
+
+          <nav class="toc">
+            <a href="#problem" data-step-link="1" class="active">1 — Problem</a>
+            <a href="#solution" data-step-link="2">2 — Solution</a>
+            <a href="#process" data-step-link="3">3 — Process</a>
+            <a href="#impact" data-step-link="4">4 — Impact</a>
+            <a href="#overview" data-step-link="5">Overview</a>
+          </nav>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="ghost" href="https://github.com/anujshresthamaskey-creator" target="_blank">Source</a>
+            <a class="ghost" href="https://www.linkedin.com/in/anuj-shrestha-11457238a/" target="_blank">Connect</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

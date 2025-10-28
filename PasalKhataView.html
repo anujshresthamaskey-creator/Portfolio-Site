@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Case Study — Pasal Khata</title>
+  <meta name="description" content="A smart digital ledger app for shop owners to track credits, payments, and balances." />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .cover {
+      width: 100%;
+      height: 350px;
+      background-image: url("assets/images/PasalKhata.png");
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">AS</div>
+        <div>
+          <div class="site-title">Pasal Khata — Case Study</div>
+          <div class="site-sub">Mobile Ledger • Firebase • Android</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" class="kicker">Back to portfolio</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="overview">
+        <div class="hero">
+          <div class="kicker">Case Study</div>
+          <h1 id="overview">Pasal Khata — Digital Business Ledger App</h1>
+          <div class="meta">Role: Full Stack Developer • Year: 2025 • Platform: Android</div>
+          <div class="cover" role="img" aria-label="Pasal Khata app screenshot"></div>
+        </div>
+
+        <!-- PROBLEM -->
+        <div class="section" id="problem">
+          <h2>Problem</h2>
+          <p class="text-muted">
+            Small local shop owners traditionally track customer credit using paper notebooks. 
+            These records can be lost, unclear, and difficult to calculate manually — often leading 
+            to financial mistakes, disputes, and time loss.
+          </p>
+        </div>
+
+        <!-- SOLUTION -->
+        <div class="section" id="solution">
+          <h2>Solution</h2>
+          <p class="text-muted">
+            Pasal Khata helps shop owners digitally record credit transactions, payments, balances, 
+            and customer history with clear analytics and secure Firebase cloud backup.
+          </p>
+
+          <div class="features">
+            <div class="feature">
+              <strong>Customer Ledger</strong>
+              <div class="text-muted">Track balances with automatic total updates.</div>
+            </div>
+            <div class="feature">
+              <strong>Payment Records</strong>
+              <div class="text-muted">Record received payments instantly.</div>
+            </div>
+            <div class="feature">
+              <strong>Cloud Backup</strong>
+              <div class="text-muted">Sync data securely using Firebase.</div>
+            </div>
+            <div class="feature">
+              <strong>Reports & Analytics</strong>
+              <div class="text-muted">View charts & transaction history summaries.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP BY STEP GUIDE -->
+        <div class="section" id="process">
+          <h2>Process — Step-by-step Usage</h2>
+          <p class="text-muted">This walkthrough guides shop owners to start using Pasal Khata effectively.</p>
+
+          <div class="steps" id="steps">
+
+            <div class="step" data-step="1">
+              <div class="num">1</div>
+              <div class="content">
+                <div class="title">Install & Sign In</div>
+                <div class="desc">Install the app and log in using your mobile number or email.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="2">
+              <div class="num">2</div>
+              <div class="content">
+                <div class="title">Add Customers</div>
+                <div class="desc">Go to “Customers” → Tap “Add New Customer” → Enter name & contact.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="3">
+              <div class="num">3</div>
+              <div class="content">
+                <div class="title">Record Credit Transactions</div>
+                <div class="desc">For each purchase on credit, enter item details & amount. The balance updates automatically.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="4">
+              <div class="num">4</div>
+              <div class="content">
+                <div class="title">Track Payments</div>
+                <div class="desc">Log received payments anytime to keep balance accurate and updated.</div>
+              </div>
+            </div>
+
+            <div class="step" data-step="5">
+              <div class="num">5</div>
+              <div class="content">
+                <div class="title">View Reports</div>
+                <div class="desc">Check monthly dues, outstanding amounts, and customer summaries in the Reports tab.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="prev" class="ghost">← Previous</button>
+            <button id="next">Next →</button>
+            <div style="flex:1"></div>
+            <a href="#" id="download" class="ghost">Download APK / Demo</a>
+          </div>
+        </div>
+
+        <!-- IMPACT -->
+        <div class="section" id="impact">
+          <h2>Impact</h2>
+          <p class="text-muted">
+            Pasal Khata helped shop owners reduce ledger errors by 54% and saved ~4 hours per week on account management.
+          </p>
+
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Firebase</span>
+            <span class="tag">Java</span>
+            <span class="tag">Android App</span>
+            <span class="tag">Business Tool</span>
+          </div>
+        </div>
+
+        <footer>
+          <div>Want this case study adapted for your business? <a href="#">Contact Me</a></div>
+        </footer>
+      </section>
+
+      <!-- SIDEBAR (unchanged) -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="kicker">Quick Navigation</div>
+          <h3>Walkthrough</h3>
+          <div class="progress"><i style="width:0%"></i></div>
+
+          <nav class="toc">
+            <a href="#problem" data-step-link="1" class="active">1 — Problem</a>
+            <a href="#solution" data-step-link="2">2 — Solution</a>
+            <a href="#process" data-step-link="3">3 — Process</a>
+            <a href="#impact" data-step-link="4">4 — Impact</a>
+            <a href="#overview" data-step-link="5">Overview</a>
+          </nav>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="ghost" href="https://github.com/anujshresthamaskey-creator" target="_blank">Source</a>
+            <a class="ghost" href="https://www.linkedin.com/in/anuj-shrestha-11457238a/" target="_blank">Connect</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
